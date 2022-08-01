@@ -1,0 +1,285 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Century 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+header{
+
+    background-image:linear-gradient(rgba(90, 14, 61, 0.5),rgba(92, 26, 72, 0.5)),url(https://images.unsplash.com/photo-1536060316316-2466bda904f1?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjZ8fGZpbmFuY2UlMjBibG9nfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+
+}
+ul{
+    float: right;
+    list-style-type: none;
+    margin-top: 25px;
+}
+ul li{
+    display: inline-block;
+}
+ul li a{
+    text-decoration: none;
+    color: white;
+    padding: 5px 20px;
+    border: 1px solid transparent;
+    transition: 0.6s ease;
+}
+ul li a:hover{background-color: #b1e9eb ;  /* rgb(231, 152, 218);*/
+    color: white;
+
+    
+}
+.logo img{
+    border-radius: 50%;
+    float: left;
+    width: 100px;
+    height: auto;
+}
+.main
+{
+    max-width: 1200px;
+    margin: auto;
+}
+/*.title{
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.title h1{
+    /*-webkit-text-stroke: rgb(198, 16, 243);
+    font-family: cursive;
+    color:white;
+    font-size: 60px;
+}
+.title h1::before
+{
+    content:attr(data-text);
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    color:aquamarine;
+    -webkit-text-stroke: 0vw blue;
+    border-right: 2px solid royalblue;
+    animation: animate 6s linear infinite;
+
+}*/
+h2{
+    position: absolute;
+    font-size:5vw;
+    color:transparent;
+    -webkit-text-stroke: .15vw  transparent;
+    text-transform: uppercase;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+
+}
+h2::before{
+    content:attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color:#b1e9eb;
+    -webkit-text-stroke: 0vw black;
+    border-right: 2px solid white;
+    overflow: hidden;
+    animation: animate 6s linear infinite ;
+}
+
+@keyframes animate {
+    0%,10%,100%
+    {
+        width:0%;
+    }
+    70%,90%
+    {
+        width: 100%;
+    }
+    
+}
+.quote
+{
+    position: absolute;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%,-50%);   
+    font-size: 120%;
+}
+.quote h4{
+    color: #b1e9eb;
+
+}
+
+
+.container
+{
+    width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+
+.container .btn
+{
+    position: absolute;
+    width: 155px;
+    height: 50px;
+    margin: 20px;
+    top: 65%;
+    left: 42%;
+}
+
+.container .btn a
+{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0px 15px 35px rgb(0, 0, 0,0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    color:#fff;
+    z-index: 1;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.container .btn:hover a
+{
+    letter-spacing: 3px;
+}
+
+.container .btn a::before
+{
+    content: '';
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to left,rgba(255,255,255,0.15),transparent);
+    transform: skewX(45deg) translateX(0);
+    transition: 0.5s;
+}
+
+
+.container .btn:hover a::before
+{
+    transform: skewX(45deg) translateX(200%);
+}
+
+.container .btn::before
+{
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -5px;
+    width: 30px;
+    height: 10px;
+    background: #f00;
+    border-radius: 10px;
+    transition: 0.5s;
+    transition-delay: 0s;
+}
+
+.container .btn:hover::before
+{
+    bottom: 0;
+    height:50%;
+    width: 100%;
+    border-radius: 30px;
+    transition-delay: 0.5s;
+}
+
+
+.container .btn::after
+{
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -5px;
+    width: 30px;
+    height: 10px;
+    background: #f00;
+    border-radius: 10px;
+    transition: 0.5s;
+    transition-delay: 0s;
+}
+
+.container .btn:hover::after
+{
+    top: 0;
+    height:50%;
+    width: 100%;
+    border-radius: 30px;
+    transition-delay: 0.5s;
+}
+
+.container .btn:nth-child(1)::before,
+.container .btn:nth-child(1)::after
+{
+    background: #2bd2ff;
+    box-shadow: 0 0 5px  #2bd2ff,0 0 15px #2bd2ff,0 0 30px #2bd2ff,0 0 60px #2bd2ff;
+}
+/* .button{
+    
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%,-50%);   
+}
+.btn{
+    background-color: rgb(84, 85, 30);
+    border: 1px solid rgb(84, 85, 30);
+    padding: 10px 30px;
+    color: white;
+    text-decoration: none;
+    transition: 0.6s ease;
+}
+.btn:hover{
+    background-color: rgb(84, 85, 30);
+    color: black;
+
+
+} */
+
+.under{
+    color: rgb(84, 85, 30);
+}
+/*.banner1{
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+img{
+    width: 120%;
+    position: absolute;
+    left: 50%;
+    top : 50%;
+    transform: translate(-50%,-50%);
+
+}*/
+
